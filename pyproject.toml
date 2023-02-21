@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "demo-2"
+version = "0.1.0"
+description = ""
+authors = ["Guy Montag <guy_montag@posteo.net>"]
+readme = "README.md"
+packages = [{include = "demo_2", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "^1.13.1"
+torchvision = "^0.14.1"
+pandas = "^1.5.3"
+matplotlib = "^3.7.0"
+scikit-learn = "^1.2.1"
+ipykernel = "^6.21.2"
+jupyter = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
