@@ -1,8 +1,3 @@
-# paths.py is a meta file that defines the paths for all the data and the files that are being used 
-# in the ML project. This is being done because it would be cumbersome to copy and paste the correct
-# file paths into every notebook of python file. In addition, maintaining it would also be a nightmare
-# so we avoid that with the paths.py file.
-
 from pathlib import Path
 import os
 
@@ -19,3 +14,10 @@ if not Path(RAW_DATA_DIR).exists():
 
 if not Path(CLEANED_DATA_DIR).exists():
     os.mkdir(CLEANED_DATA_DIR)
+
+# print(RAW_DATA_DIR)
+
+# paths.py is a meta file that defines the paths for all the data and the files that are being used 
+# in the ML project. This is being done because it would be cumbersome to copy and paste the correct
+# file paths into every notebook of python file. In addition, maintaining it would also be a nightmare
+# so we avoid that with the paths.py file.
