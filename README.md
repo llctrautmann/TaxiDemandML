@@ -71,14 +71,6 @@ poetry install
 
 This will create a virtual environment and install all the required packages.
 
-## Usage
-
-[Explain how to use the project, including any necessary steps or commands. Provide examples if applicable.]
-
-## Contributing
-
-[Specify how others can contribute to the project. Include guidelines for submitting issues or pull requests.]
-
 ## License
 
 [Specify the license under which the project is distributed. Include any necessary disclaimers or terms of use.]
