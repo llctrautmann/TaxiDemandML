@@ -73,6 +73,4 @@ This will create a virtual environment and install all the required packages.
 
 ## License
 
-[Specify the license under which the project is distributed. Include any necessary disclaimers or terms of use.]
-
-Feel free to modify the content as per your project's requirements.
+PROJECT TUTORIAL: The Real-World Machine Learning Tutorial BY Pau Labarta Bajo [http://paulabartabajo.gumroad.com/?recommended_by=library]
