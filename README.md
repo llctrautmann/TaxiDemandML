@@ -1,76 +1,70 @@
-Sure! Here's an updated version of the README.md file with the additional information:
-
-# Taxi Demand Prediction around Central Park
-
-This repository contains the source code and data for a project that aims to predict taxi demand around Central Park using time series data. The project focuses on converting the time series data into tabular format and utilizing it to predict the number of pickups for a given hour based on the previous hour's data.
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Data](#data)
-- [Notebooks](#notebooks)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+# Taxi Demand Prediction around Central Park - README
 
 ## Introduction
 
-The purpose of this project is to develop a predictive model for taxi demand around Central Park based on historical time series data. By converting the time series data into a tabular format, each row represents a pickup event within a year, and each column represents the number of pickups for a previous hour. This tabular representation allows for easier analysis and prediction using various machine learning techniques.
+This repository contains the source code and data for a project that aims to predict taxi demand around Central Park using time series data. The project focuses on converting the time series data into a tabular format and utilizing it to predict the number of pickups for a given hour based on the previous hour's data.
+
+### Table of Contents
+
+1. [Introduction](#introduction)
+2. [Data](#data)
+3. [Notebooks](#notebooks)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Contributing](#contributing)
+7. [License](#license)
 
 ## Data
 
-The `data` directory contains the raw and transformed data used in the project.
+The data folder contains two subdirectories: `raw` and `transformed`.
 
-### Raw Data
+- `raw`: This directory contains raw data files in Parquet format representing taxi rides for each month of the year 2022. The files are named as follows: `rides_2022-MM.parquet`, where `MM` represents the month.
 
-The `data/raw` directory stores the raw data files in Parquet format. Each file corresponds to rides data for a specific month in the year 2022.
+- `transformed`: This directory contains transformed data files in Parquet format, including the final tabular data used for modeling (`tabular_data.parquet`). Additionally, there are intermediate files generated during the data transformation process.
 
-- `rides_2022-01.parquet`
-- `rides_2022-02.parquet`
-- `rides_2022-03.parquet`
-- `rides_2022-04.parquet`
-- `rides_2022-05.parquet`
-- `rides_2022-06.parquet`
-- `rides_2022-07.parquet`
-- `rides_2022-08.parquet`
-- `rides_2022-09.parquet`
-- `rides_2022-10.parquet`
-- `rides_2022-11.parquet`
-- `rides_2022-12.parquet`
-
-The data is __NOT__ included in the repository.
-
-### Transformed Data
-
-The `data/transformed` directory contains the transformed data obtained from the raw data.
-- `tabular_data.parquet`: Tabular representation of the transformed data. Each row represents a pickup event within a year, and each column represents the number of pickups for a previous hour. (not included in the repository)
+- `taxi_zones.csv`: is required for the geolocation of the taxi zones. 
 
 ## Notebooks
 
-The `notebooks` directory contains Jupyter notebooks that demonstrate the project workflow and analysis.
+The `notebooks` directory consists of Jupyter notebooks used for different stages of the project:
 
-- `00_functions.ipynb`: Notebook with utility functions used throughout the project.
-- `01_load_and_validate_raw_data.ipynb`: Notebook for loading and validating the raw data.
-- `02_transform_raw_data_to_time_series.ipynb`: Notebook for transforming the raw data into time series format.
-- `03_time_series_data.ipynb`: Notebook for exploring and analyzing the time series data.
-- `04_transform_raw_data_into_features_and_targets.ipynb`: Notebook for transforming the raw data into features and targets.
-- `05_visualize_training_data.ipynb`: Notebook for visualizing the training data.
+1. `00_functions.ipynb`: A notebook containing custom functions used throughout the project.
+
+2. `01_load_and_validate_raw_data.ipynb`: A notebook for loading and validating the raw data.
+
+3. `02_transform_raw_data_to_time_series.ipynb`: A notebook that transforms raw data into time series format.
+
+4. `03_time_series_data.ipynb`: A notebook exploring and analyzing time series data.
+
+5. `04_transform_raw_data_into_features_and_targets.ipynb`: A notebook responsible for feature engineering.
+
+6. `05_visualize_training_data.ipynb`: A notebook used to visualize the training data.
+
+7. `06_baseline_model.ipynb`: A notebook implementing a baseline model for prediction.
+
+8. `07_XGBoost_model.ipynb`: A notebook presenting an XGBoost model for prediction.
+
+9. `08_catboost.ipynb`: A notebook demonstrating the CatBoost model.
+
+10. `09_catboost_model_with_feature_engineering.ipynb`: A notebook combining CatBoost with feature engineering.
+
+11. `10_catboost_with_hyperparameter_tuning.ipynb`: A notebook for hyperparameter tuning of CatBoost.
+
+The `catboost_info` directory stores additional files related to CatBoost training.
 
 ## Installation
 
-To install the project dependencies, use the Poetry package manager. The necessary information for installation is provided in the `pyproject.toml` file.
+To set up the environment for this project, you can use `poetry` to install the required dependencies. Use the provided `pyproject.toml` and `poetry.lock` files to manage dependencies. Run the following command to create the environment:
 
-1. Ensure Poetry is installed on your system. If not, follow the [official Poetry installation guide](https://python-poetry.org/docs/#installation) to install it.
-2. Navigate to the project root directory.
-3. Run the following command to install the dependencies:
-
-```bash
+```
 poetry install
 ```
 
-This will create a virtual environment and install all the required packages.
+## Usage
 
-## License
+After installing the required dependencies, you can use the Jupyter notebooks in the `notebooks` directory to explore the project and run the code cells sequentially.
 
-PROJECT TUTORIAL: The Real-World Machine Learning Tutorial BY Pau Labarta Bajo [http://paulabartabajo.gumroad.com/?recommended_by=library]
+## Contributing
+
+Contributions to this project are welcome! If you find any issues or have ideas for improvements, please open an issue or submit a pull request to contribute.
+
